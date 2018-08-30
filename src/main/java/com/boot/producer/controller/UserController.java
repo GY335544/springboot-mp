@@ -2,23 +2,22 @@ package com.boot.producer.controller;
 
 import java.util.List;
 
-import com.boot.common.base.PageReq;
-import com.boot.common.base.BaseResp;
-import com.boot.common.base.PageResp;
-import com.boot.common.base.AjaxResult;
-import com.boot.common.base.BusinessException;
-
-import com.boot.producer.model.UserModel;
-import com.boot.producer.service.IUserService;
-
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import com.boot.common.base.AjaxResult;
+import com.boot.common.base.BaseResp;
+import com.boot.common.base.BusinessException;
+import com.boot.common.base.PageReq;
+import com.boot.common.base.PageResp;
+import com.boot.producer.model.UserModel;
+import com.boot.producer.service.IUserService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -26,7 +25,7 @@ import io.swagger.annotations.ApiOperation;
 /**
  *
  * @author gy
- * @since 2018-08-27
+ * @since 2018-08-30
  */
 @Api(":user API")
 @RestController

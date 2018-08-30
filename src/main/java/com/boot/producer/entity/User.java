@@ -1,35 +1,45 @@
 package com.boot.producer.entity;
 
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 
 /**
+ * <p>
+ * 
+ * </p>
  *
  * @author gy
- * @since 2018-08-27
+ * @since 2018-08-30
  */
 @TableName("t_user")
 public class User extends Model<User> {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId("ID")
     private String id;
     /**
      * 账号
      */
+    @TableField("USERNAME")
     private String username;
     /**
      * 密码
      */
+    @TableField("PASSWORD")
     private String password;
     /**
      * 昵称
      */
+    @TableField("NICKNAME")
     private String nickname;
     /**
      * 身份
      */
+    @TableField("ROLES")
     private String roles;
 
 

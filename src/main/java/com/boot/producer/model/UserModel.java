@@ -3,30 +3,39 @@ package com.boot.producer.model;
 import com.boot.common.base.BaseModel;
 
 /**
+ * <p>
+ * 
+ * </p>
+ *
  * @author gy
- * @since 2018-08-27
+ * @since 2018-08-30
  */
 
 public class UserModel extends BaseModel {
 
     private static final long serialVersionUID = 1L;
 
+
     private String id;
     /**
      * 账号
      */
+
     private String username;
     /**
      * 密码
      */
+
     private String password;
     /**
      * 昵称
      */
+
     private String nickname;
     /**
      * 身份
      */
+
     private String roles;
 
 
