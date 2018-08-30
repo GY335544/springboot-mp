@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boot.producer.mapper.PlantMapper">
+   
+   <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.boot.producer.model.PlantModel">
+        <id column="ID" property="id" />
+        <result column="FARMER_NAME" property="farmerName" />
+        <result column="GOODS_NAME" property="goodsName" />
+        <result column="GOODVARIETY_NAME" property="goodvarietyName" />
+        <result column="AREAS" property="areas" />
+        <result column="CREATE_TIME" property="createTime" />
+    </resultMap>
+   
+   <select id="getAllPlant" resultMap="BaseResultMap">
+   		SELECT * from plant
+   </select>
+   
+   <select id="getPlantByDate" resultMap="BaseResultMap" parameterType="java.lang.String">
+   		SELECT * from plant where 1=1
+   		 <if test="dateStr != null and dateStr != ''">
+			 AND DATE_FORMAT(CREATE_TIME,'%Y') = #{dateStr} 	
+ 		 </if>
+   </select>
+</mapper>
